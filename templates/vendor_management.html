@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="py-5">
+  <div class="container">
+    <h1 class="text-light fw-bold mb-4">Vendor Management</h1>
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="p-4 bg-white rounded-4 shadow-sm">
+          <h2 class="h5 mb-3 fw-semibold"><i class="bi bi-upload me-3"></i>Upload new image</h2>
+          <form>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Title</label>
+              <input type="text" class="form-control" placeholder="e.g., City Sunset">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Category</label>
+              <select class="form-select">
+                <option>Business & Finance</option><option>Technology & Communication</option><option>Lifestyle & Leisure</option><option>Health & Wellness</option><option>Food & Drink</option><option>Travel & Tourism</option><option>Nature & Outdoor</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Price (A$)</label>
+              <input type="number" class="form-control" min="5" max="20" step="1" value="10">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Image file</label>
+              <input type="file" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-semibold">Short description</label>
+              <textarea class="form-control" rows="3" placeholder="One or two sentences…"></textarea>
+            </div>
+            <button type="button" class="btn btn-pp w-100">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="p-4 bg-white rounded-4 shadow-sm">
+          <h2 class="h5 mb-3 fw-semibold"><i class="bi bi-images me-2"></i>My uploads</h2>
+          <div class="row row-cols-1 row-cols-md-2 g-3">
+        
+            
+
+<div class="col">
+  <div class="card h-100">
+    <img src="img/boardroom.jpg" class="card-img-top" alt="Boardroom Briefing">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-start mb-2">
+        <span class="badge badge-pp">Business & Finance</span>
+        <span class="fw-semibold">A$12</span>
+      </div>
+      <h5 class="card-title">Boardroom Briefing</h5>
+      <p class="card-text small text-muted">Description</p>
+    </div>
+    <div class="card-footer bg-white border-0 d-flex gap-3 mb-2">
+      <a href="#" class="btn btn-sm btn-remove-outline flex-fill">Remove</a>
+      <a href="#" class="btn btn-sm btn-pp flex-fill">Edit</a>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100">
+    <img src="img/startup-desk.jpg" class="card-img-top" alt="Startup Desk Setup">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-start mb-2">
+        <span class="badge badge-pp">Technology & Communication</span>
+        <span class="fw-semibold">A$9</span>
+      </div>
+      <h5 class="card-title">Startup Desk Setup</h5>
+      <p class="card-text small text-muted">Description</p>
+    </div>
+    <div class="card-footer bg-white border-0 d-flex gap-3 mb-2">
+      <a href="#" class="btn btn-sm btn-remove-outline flex-fill">Remove</a>
+      <a href="#" class="btn btn-sm btn-pp flex-fill">Edit</a>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100">
+    <img src="img/brunch.jpg" class="card-img-top" alt="Weekend Brunch">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-start mb-2">
+        <span class="badge badge-pp">Food & Drink</span>
+        <span class="fw-semibold">A$8</span>
+      </div>
+      <h5 class="card-title">Weekend Brunch</h5>
+      <p class="card-text small text-muted">Description</p>
+    </div>
+    <div class="card-footer bg-white border-0 d-flex gap-3 mb-2">
+      <a href="#" class="btn btn-sm btn-remove-outline flex-fill">Remove</a>
+      <a href="#" class="btn btn-sm btn-pp flex-fill">Edit</a>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100">
+    <img src="img/run.jpg" class="card-img-top" alt="Morning Run">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-start mb-2">
+        <span class="badge badge-pp">Health & Wellness</span>
+        <span class="fw-semibold">A$10</span>
+      </div>
+      <h5 class="card-title">Morning Run</h5>
+      <p class="card-text small text-muted">Description</p>
+    </div>
+    <div class="card-footer bg-white border-0 d-flex gap-3 mb-2">
+      <a href="#" class="btn btn-sm btn-remove-outline flex-fill">Remove</a>
+      <a href="#" class="btn btn-sm btn-pp flex-fill">Edit</a>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100">
+    <img src="img/nomad.jpg" class="card-img-top" alt="Digital Nomad">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-start mb-2">
+        <span class="badge badge-pp">Lifestyle & Leisure</span>
+        <span class="fw-semibold">A$11</span>
+      </div>
+      <h5 class="card-title">Digital Nomad</h5>
+      <p class="card-text small text-muted">Description</p>
+    </div>
+    <div class="card-footer bg-white border-0 d-flex gap-3 mb-2">
+      <a href="#" class="btn btn-sm btn-remove-outline flex-fill">Remove</a>
+      <a href="#" class="btn btn-sm btn-pp flex-fill">Edit</a>
+    </div>
+  </div>
+</div>
+
+<div class="col">
+  <div class="card h-100">
+    <img src="img/coast.jpg" class="card-img-top" alt="Coastal Escape">
+    <div class="card-body">
+      <div class="d-flex justify-content-between align-items-start mb-2">
+        <span class="badge badge-pp">Travel & Tourism</span>
+        <span class="fw-semibold">A$15</span>
+      </div>
+      <h5 class="card-title">Coastal Escape</h5>
+      <p class="card-text small text-muted">Description</p>
+    </div>
+    <div class="card-footer bg-white border-0 d-flex gap-3 mb-2">
+      <a href="#" class="btn btn-sm btn-remove-outline flex-fill">Remove</a>
+      <a href="#" class="btn btn-sm btn-pp flex-fill">Edit</a>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

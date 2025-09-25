@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="py-5">
+    <div class="container">
+        <h1 class="text-light fw-bold mb-4">Your Cart</h1>
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="bg-white rounded-4 shadow-sm p-3">
+                    <div class="table-responsive">
+                        <table class="table align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Title</th>
+                                    <th>Price</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td style="width:90px"><img src="img/boardroom.jpg" class="img-fluid rounded"
+                                            alt="" /></td>
+                                    <td>Boardroom Briefing<div class="small text-muted">Business & Finance</div>
+                                    </td>
+                                    <td>A$12</td>
+                                    <td class="text-end"><a href="#" class="small text-decoration-none"><i
+                                                class="bi bi-x-circle me-1"></i>Remove</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td style="width:90px"><img src="img/startup-desk.jpg" class="img-fluid rounded"
+                                            alt="" /></td>
+                                    <td>Startup Desk Setup<div class="small text-muted">Technology & Communication</div>
+                                    </td>
+                                    <td>A$9</td>
+                                    <td class="text-end"><a href="#" class="small text-decoration-none"><i
+                                                class="bi bi-x-circle me-1"></i>Remove</a></td>
+                                </tr>
+
+                                <tr>
+                                    <td style="width:90px"><img src="img/brunch.jpg" class="img-fluid rounded" alt="" />
+                                    </td>
+                                    <td>Weekend Brunch<div class="small text-muted">Food & Drink</div>
+                                    </td>
+                                    <td>A$8</td>
+                                    <td class="text-end"><a href="#" class="small text-decoration-none"><i
+                                                class="bi bi-x-circle me-1"></i>Remove</a></td>
+                                </tr>
+
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2" class="text-end fw-semibold">Total</td>
+                                    <td colspan="2" class="fw-bold text-total">A$39</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="bg-white rounded-4 shadow-sm p-4">
+                    <h2 class="h5 mb-3"><i class="bi bi-person me-2"></i>Details</h2>
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Full name</label>
+                            <input type="text" class="form-control" placeholder="Your name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="you@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Card number</label>
+                            <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                        </div>
+                        <div class="row">
+                            <div class="col-6 mb-3">
+                                <label class="form-label">Expiry</label>
+                                <input type="text" class="form-control" placeholder="MM/YY">
+                            </div>
+                            <div class="col-6 mb-3">
+                                <label class="form-label">CVC</label>
+                                <input type="text" class="form-control" placeholder="000">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-pp w-100">Submit order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

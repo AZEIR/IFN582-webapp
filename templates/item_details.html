@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<section  class="py-5" id="image-detail">
+    <div class="container" >
+        <div class="row ">
+            <div class="col-8"> 
+                <h1 class="text-light fw-bold mb-3" >Image</h1>
+                <img src="{{ url_for('static', filename = image.img )}}" alt="{{ image.title }}" > 
+            </div>
+            <div class="col">
+                <h1 class="text-light fw-bold mb-3">Details</h1>
+                <div class="d-flex flex-column align-items-start rounded-4 p-4 w-100 " style="background-color: azure">
+                    <span class="badge badge-pp mb-2 align-self-start">{{ image.title }}</span>
+                    <h1 class="h3 fw-bold mb-2">{{ image.title }}</h1>
+                    <span class="fw-semibold fw-bold text-success">A${{ '%0.2f'|format(image.price|float) }}</span>
+                    <ul class="list-unstyled small text-navy mb-0">
+                        <li>
+                            <i class="bi bi-card-image me-2"></i>*make this dynamic Aspect: 4:3 · JPG
+                        </li>
+                        <li>
+                            <i class="bi bi-shield-check me-2"></i>*Make options for this Licence: free stock photo
+                        </li>
+                    </ul>
+                    <div class="d-flex gap-2 w-100 mt-3 justify-content-center">
+                        <a href="{{ url_for("add_to_cart") }}{% if image.imgid %}?imgid={{ image.imgid }}{% endif %}"
+                            class="btn btn-pp" style="width: 170px; border-radius: 999px;"><i
+                                class="bi bi-cart-plus me-1"></i>Add to cart</a>
+                        <a href="/browseall" class="btn btn-cat-outline" style="width: 170px;"><i class="bi bi-arrow-left me-1"></i>Back to
+                            gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

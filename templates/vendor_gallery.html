@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+    <section class="py-4">
+        <div class="container mb-4">
+            <h3 class="text-light fw-bold mb-3">Categories</h3>
+            <div class="d-flex flex-wrap">
+                <a href="vendor_gallery.html" class="btn btn-cat-outline">Business & Finance</a>
+                <a href="vendor_gallery.html" class="btn btn-cat-outline">Technology & Communication</a>
+                <a href="vendor_gallery.html" class="btn btn-cat-outline">Lifestyle & Leisure</a>
+                <a href="vendor_gallery.html" class="btn btn-cat-outline">Health & Wellness</a>
+                <a href="vendor_gallery.html" class="btn btn-cat-outline">Food & Drink</a>
+                <a href="vendor_gallery.html" class="btn btn-cat-outline">Travel & Tourism</a>
+                <a href="vendor_gallery.html" class="btn btn-cat-outline">Nature & Outdoor</a>
+            </div>
+        </div>
+    </section>
+    <section class="py-4">
+        <div class="container">
+            <h3 class="text-light fw-bold mb-3">Featured Images</h3>
+            <!-- Fixed grid -->
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-3">
+                {% for image in images %}
+                    <div class="col">
+                        <div class="card h-100">
+                            <a href="{{ url_for('details', imgid = image.imgid) }}">
+                            <img src="{{ url_for('static', filename = image.img) }}" class="card-img-top" alt="{{ image.title}}">
+                            </a>
+                            <div class="card-body py-2 px-3">
+                                <div class="d-flex justify-content-between align-items-start ">
+                                    <span class="badge badge-pp">{{ image.title }}</span>
+                                </div>
+                                <h3 class="card-title mt-3">
+                                    <a href="{{ url_for('details', imgid=image.imgid) }}"
+                                       class="text-decoration-none text-navy">{{ image.title }}</a>
+                                </h3>
+                            </div>
+                            <div class="card-footer bg-white border-0 d-flex align-items-center px-3 pb-3">
+                                <!-- {% if image.price is defined %} -->
+                                <span class="fw-semibold fw-bold text-success">A${{ '%.2f'|format(image.price|float) }}</span>
+                                <!-- {% endif %} -->
+                                <a href="{{ url_for("add_to_cart") }}{% if image.imgid %}?imgid={{ image.imgid }}{% endif %}"
+                                   class="btn btn-sm btn-pp ms-auto">
+                                    <i class="bi bi-cart-plus me-1"></i>Add
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
